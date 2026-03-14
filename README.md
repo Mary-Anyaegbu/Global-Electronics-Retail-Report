@@ -74,8 +74,10 @@ Interactive dashboards were developed to present:
 - Monthly Customer Acquisition vs Retention
 - Stores performance by age group, country, states
 ### Dasboard preview
-![Overview](images/Overview.png)  ![Product](images/Product.png)
-![Customer](images/Customer.png) ![Stores](Stores/Overview.png)
+![Overview](images/Overview.png) 
+![Product](images/Product.png)
+![Customer](images/Customer.png)
+![Stores](images/Stores.png)
 
 ## Key Insights
 - The business generated $55.76M in revenue and $32.66M in profit, representing an approximate 58.6% profit margin, with 198K units sold to 15K unique customers. Sales trends indicate a significant dip around April followed by steady recovery, with peak performance in December, suggesting strong seasonal demand toward the end of the year.
