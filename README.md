@@ -10,6 +10,9 @@ A Sales performance dashboard was created to consolidate and analyze sales, prod
 The Project analyzed revenue and profit performance across multiple retail stores to uncover factors influencing sales growth, product performance, customer segment and store performance.
 The analysis integrated sales data, product performance, customer performance metrics and key performance indicators to provide stakeholders with actionable insights for strategic decision making.
 
+## Power BI Dashboard
+You can view the interactive dashboard: [View Dashboard] (https://app.powerbi.com/view?r=eyJrIjoiNWVkMzQ3YjUtNjk3NS00ZmFlLWEyMTUtN2JmYzBiY2RjYTcyIiwidCI6IjFmYjkyMjA4LTYxYjUtNGZlMC1hZGY1LTlkMWIxNjA1OGU0YyJ9)
+
 ## The Data Model Overview
 The dataset consists of multiple related tables: 
 - Sales: Contains transactional data including orders, delivery dates, quantities, currency, and links to customers, stores, and products. 
