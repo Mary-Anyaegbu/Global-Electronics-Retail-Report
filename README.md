@@ -63,7 +63,7 @@ This validation process ensured analytical integrity.
 ### Data Modelling
 A relational data model was designed using a star schema to link the sales, customer, product and stores table.
 A date table was created and linked to the Sales table to enable time intelligence calculations.
-![Data modeling](images/Data modeling.png)
+![Data modeling](images/Data modeling.jpg)
 
 ### Data Visualization
 A four paged interactive dashboard was built. The dashboard answered the stakeholders questions in detail.
