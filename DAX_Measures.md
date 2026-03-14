@@ -9,19 +9,22 @@ Date Table =
 VAR mindate = MIN('Sales fact'[Order Date])
 VAR maxdate = MAX('Sales fact'[Order Date])
  RETURN 
- CALENDAR(mindate, maxdate) ```
+ CALENDAR(mindate, maxdate)
+```
 
 ## Year-Over-Year Revenue Growth
 Calculates the percentage change in revenue compared to the previous year.
 ```DAX
 RevenueLY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Date Table'[Date]))
-YOY Revenue% = DIVIDE([Total Revenue] - [RevenueLY],[RevenueLY]) ```
+YOY Revenue% = DIVIDE([Total Revenue] - [RevenueLY],[RevenueLY])
+```
 
 ## Year-Over-Year Profit Growth
 Calculates the percentage change in profit compared to the previous year.
 ```DAX
 ProfitLY = CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
-ProfitYOY = DIVIDE([Profit] - [ProfitLY],[ProfitLY]) ```
+ProfitYOY = DIVIDE([Profit] - [ProfitLY],[ProfitLY])
+```
 
 ## Product by Profit Rank
 Ranks products based on total profit in descending/ascending order to identify the top/bottom performing products.
@@ -32,7 +35,8 @@ Rank ProductbyProfit =
        VAR Bottomproductbyprofit = RANKX(ALL('Products'[Product Name]), [Profit], , ASC,Dense)
        VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyprofit, Bottomproductbyprofit)
 RETURN 
-       IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Profit]) ```
+       IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Profit])
+```
 
 ## Product by Revenue Rank
 Ranks products based on total revenue in descending/ascending order to identify the top/bottom performing products.
@@ -43,7 +47,8 @@ Rank ProductbyRevenue =
        VAR Bottomproductbyrevenue = RANKX(ALL('Products'[Product Name]), [Total Revenue], , ASC,Dense)
        VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyrevenue, Bottomproductbyrevenue)
 RETURN 
-       IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Total Revenue]) ```
+       IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Total Revenue])
+ ```
 
 ## New Customers
 Counts customers who made their first purchase within the selected time period.
@@ -51,7 +56,8 @@ Counts customers who made their first purchase within the selected time period.
 New customers = 
        CALCULATE(DISTINCTCOUNT('Sales fact'[CustomerKey]),FILTER('Sales fact',
        'Sales fact'[First Purchase Date]  >= MIN('Date Table'[Date]) &&
-        'Sales fact'[First Purchase Date] <= MAX('Date Table'[Date]))) ```
+        'Sales fact'[First Purchase Date] <= MAX('Date Table'[Date])))
+```
 
 ## First Purchase Date
 Identifies the earliest purchase date for each customer.  
@@ -59,7 +65,8 @@ This measure is used to determine when a customer first engaged with the busines
 ```DAX
 First Purchase Date =
        CALCULATE(MIN('Sales fact'[Order Date]),
-       ALLEXCEPT('Sales fact','Sales fact'[CustomerKey])) ```
+       ALLEXCEPT('Sales fact','Sales fact'[CustomerKey]))
+ ```
 
 ## Store Age
 Calculates the number of years since each store was opened.  
@@ -71,4 +78,5 @@ Store Age =
             Stores[Age] <= 10, "Under 10 years",
             Stores[Age] <= 14, "11-14 years",
             Stores[Age] <= 17, "15-17 years", 
-            "> 17 years") ```
+            "> 17 years")
+```
