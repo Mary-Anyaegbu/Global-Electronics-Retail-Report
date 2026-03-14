@@ -6,31 +6,35 @@ A dedicated calendar table used for time intelligence calculations such as Year-
 The table ensures consistent time analysis across the model and enables functions like SAMEPERIODLASTYEAR.
 
 Date Table = 
-VAR mindate = MIN('Sales fact'[Order Date])
-VAR maxdate = MAX('Sales fact'[Order Date])
-RETURN 
-CALENDAR(mindate, maxdate)
+       VAR mindate = MIN('Sales fact'[Order Date])
+       VAR maxdate = MAX('Sales fact'[Order Date])
+       RETURN 
+       CALENDAR(mindate, maxdate)
 
 ## Year-Over-Year Revenue Growth
 Calculates the percentage change in revenue compared to the previous year.
 
-RevenueLY = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Date Table'[Date]))
-YOY Revenue% = DIVIDE([Total Revenue] - [RevenueLY],[RevenueLY])
+RevenueLY = 
+       CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Date Table'[Date]))
+YOY Revenue% =
+       DIVIDE([Total Revenue] - [RevenueLY],[RevenueLY])
 
 ## Year-Over-Year Profit Growth
 Calculates the percentage change in profit compared to the previous year.
 
-ProfitLY = CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
-ProfitYOY = DIVIDE([Profit] - [ProfitLY],[ProfitLY])
+ProfitLY = 
+       CALCULATE([Profit], SAMEPERIODLASTYEAR('Date Table'[Date]))
+ProfitYOY =
+       DIVIDE([Profit] - [ProfitLY],[ProfitLY])
 
 ## Product by Profit Rank
 Ranks products based on total profit in descending/ascending order to identify the top/bottom performing products.
 Used in the dashboard to display the Top N products by profit.
 
 Rank ProductbyProfit = 
-VAR Topproductbyprofit = RANKX(ALL('Products'[Product Name]),[Profit], ,DESC,Dense)
-VAR Bottomproductbyprofit = RANKX(ALL('Products'[Product Name]), [Profit], , ASC,Dense)
-VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyprofit, Bottomproductbyprofit)
+       VAR Topproductbyprofit = RANKX(ALL('Products'[Product Name]),[Profit], ,DESC,Dense)
+       VAR Bottomproductbyprofit = RANKX(ALL('Products'[Product Name]), [Profit], , ASC,Dense)
+       VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyprofit, Bottomproductbyprofit)
 RETURN 
        IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Profit])
 
@@ -39,24 +43,27 @@ Ranks products based on total revenue in descending/ascending order to identify 
 Used in the dashboard to display the Top N products by revenue.
 
 Rank ProductbyRevenue = 
-VAR Topproductbyrevenue = RANKX(ALL('Products'[Product Name]),[Total Revenue], ,DESC,Dense)
-VAR Bottomproductbyrevenue = RANKX(ALL('Products'[Product Name]), [Total Revenue], , ASC,Dense)
-VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyrevenue, Bottomproductbyrevenue)
+       VAR Topproductbyrevenue = RANKX(ALL('Products'[Product Name]),[Total Revenue], ,DESC,Dense)
+       VAR Bottomproductbyrevenue = RANKX(ALL('Products'[Product Name]), [Total Revenue], , ASC,Dense)
+       VAR _ranking = IF(SELECTEDVALUE(TopBottom[Value]) ="TOP",Topproductbyrevenue, Bottomproductbyrevenue)
 RETURN 
        IF(_ranking <= 'TopN Parameter'[TopN Parameter Value], [Total Revenue])
 
 ## New Customers
 Counts customers who made their first purchase within the selected time period.
 
-New customers = CALCULATE(DISTINCTCOUNT('Sales fact'[CustomerKey]),FILTER('Sales fact',
-                                    'Sales fact'[First Purchase Date]  >= MIN('Date Table'[Date]) &&
-                                     'Sales fact'[First Purchase Date] <= MAX('Date Table'[Date])))
+New customers = 
+       CALCULATE(DISTINCTCOUNT('Sales fact'[CustomerKey]),FILTER('Sales fact',
+       'Sales fact'[First Purchase Date]  >= MIN('Date Table'[Date]) &&
+        'Sales fact'[First Purchase Date] <= MAX('Date Table'[Date])))
 
 ## First Purchase Date
 Identifies the earliest purchase date for each customer.  
 This measure is used to determine when a customer first engaged with the business and is essential for classifying customers as new or returning.
 
-First Purchase Date = CALCULATE(MIN('Sales fact'[Order Date]), ALLEXCEPT('Sales fact','Sales fact'[CustomerKey]))
+First Purchase Date =
+       CALCULATE(MIN('Sales fact'[Order Date]),
+       ALLEXCEPT('Sales fact','Sales fact'[CustomerKey]))
 
 ## Store Age
 Calculates the number of years since each store was opened.  
