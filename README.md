@@ -11,7 +11,8 @@ The Project analyzed revenue and profit performance across multiple retail store
 The analysis integrated sales data, product performance, customer performance metrics and key performance indicators to provide stakeholders with actionable insights for strategic decision making.
 
 ## Power BI Dashboard
-You can view the interactive dashboard:(https://app.powerbi.com/view?r=eyJrIjoiNWVkMzQ3YjUtNjk3NS00ZmFlLWEyMTUtN2JmYzBiY2RjYTcyIiwidCI6IjFmYjkyMjA4LTYxYjUtNGZlMC1hZGY1LTlkMWIxNjA1OGU0YyJ9)
+You can view the interactive dashboard here:
+[Global Electronics Retail Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNWVkMzQ3YjUtNjk3NS00ZmFlLWEyMTUtN2JmYzBiY2RjYTcyIiwidCI6IjFmYjkyMjA4LTYxYjUtNGZlMC1hZGY1LTlkMWIxNjA1OGU0YyJ9)
 
 ## The Data Model Overview
 The dataset consists of multiple related tables: 
@@ -55,7 +56,7 @@ Within Power BI environment, calculated metrics were developed to quantify perfo
 - KPI parameter
 - Top N parameter
 - Ranking Parameter
-- Customer Acquisition and Retention metrics
+
 DAX measures were used to dynamically compute KPIs across time periods, products, customer segment and stores enabling interactive dashboard analysis.
 
 ### Data validation
