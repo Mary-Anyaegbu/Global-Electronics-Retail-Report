@@ -63,7 +63,7 @@ This validation process ensured analytical integrity.
 ### Data Modelling
 A relational data model was designed using a star schema to link the sales, customer, product and stores table.
 A date table was created and linked to the Sales table to enable time intelligence calculations.
-![image alt](https://github.com/Mary-Anyaegbu/Global-Electronics-Retail-Report/blob/0ce7d864bd54f233eaddf90a07db95aff9483819/Screenshot%202026-03-13%20111433.png)
+![Data modeling](images/Data modeling.png)
 
 ### Data Visualization
 A four paged interactive dashboard was built. The dashboard answered the stakeholders questions in detail.
