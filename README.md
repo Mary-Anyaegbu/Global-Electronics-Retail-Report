@@ -60,10 +60,12 @@ Cross checks were conducted to ensure:
 •	KPI outputs were consistent across filters and segments
 •	Revenue/Profit totals matched transactional aggregates
 This validation process ensured analytical integrity.
-Data Modelling
+### Data Modelling
 A relational data model was designed using a star schema to link the sales, customer, product and stores table.
 A date table was created and linked to the Sales table to enable time intelligence calculations.
-Data Visualization
+![image alt](https://github.com/Mary-Anyaegbu/Global-Electronics-Retail-Report/blob/0ce7d864bd54f233eaddf90a07db95aff9483819/Screenshot%202026-03-13%20111433.png)
+
+### Data Visualization
 A four paged interactive dashboard was built. The dashboard answered the stakeholders questions in detail.
 Interactive dashboards were developed to present:
 •	Overview of KPIs showing Growth rate, monthly trend and summary of top 3 best performers across customer segment, product, countries and stores.
@@ -72,21 +74,21 @@ Interactive dashboards were developed to present:
 •	Stores performance by age group, country, states
 
 ## Key Insights
-•	The business generated $55.76M in revenue and $32.66M in profit, representing an approximate 58.6% profit margin, with 198K units sold to 15K unique customers. Sales trends indicate a significant dip around April followed by steady recovery, with peak performance in December, suggesting strong seasonal demand toward the end of the year.
-•	Revenue is Highly Concentrated in the United States. Analysis of revenue by country shows that the United States generates approximately 53.58% of revenue, significantly outperforming other markets. This indicates that a large portion of total sales is concentrated in the U.S. market.
-•	Mature Stores Generate Significantly Higher Revenue. Stores that have been operating for 11–17 years generate approximately 79.2% of revenue, while newer stores operating for less than 10 years generate only about 4.1% of revenue. This indicates that store maturity plays a major role in revenue generation, likely due to stronger customer loyalty and established market presence.
-•	Customer Acquisition appears stronger than Customer Retention. The monthly customer analysis shows that new customers consistently outnumber existing customers across all months, indicating that the business relies heavily on new customers rather than old retained customers.
-•	Older Customer Segments Contribute the Most Revenue. Customer demographic analysis shows that the 60+ age group represents the largest customer segment with approximately 47.2% of customers. This group also generates the highest revenue contribution, estimated at around $23M.
-•	Revenue is Driven by a few high-performing Product Categories. Product performance analysis shows that the Computers category generates approximately 34.62% of revenue, making it the highest-performing category. While games and toys categories contribute significantly less with 1.3% of revenue
+- The business generated $55.76M in revenue and $32.66M in profit, representing an approximate 58.6% profit margin, with 198K units sold to 15K unique customers. Sales trends indicate a significant dip around April followed by steady recovery, with peak performance in December, suggesting strong seasonal demand toward the end of the year.
+- Revenue is Highly Concentrated in the United States. Analysis of revenue by country shows that the United States generates approximately 53.58% of revenue, significantly outperforming other markets. This indicates that a large portion of total sales is concentrated in the U.S. market.
+- Mature Stores Generate Significantly Higher Revenue. Stores that have been operating for 11–17 years generate approximately 79.2% of revenue, while newer stores operating for less than 10 years generate only about 4.1% of revenue. This indicates that store maturity plays a major role in revenue generation, likely due to stronger customer loyalty and established market presence.
+- Customer Acquisition appears stronger than Customer Retention. The monthly customer analysis shows that new customers consistently outnumber existing customers across all months, indicating that the business relies heavily on new customers rather than old retained customers.
+- Older Customer Segments Contribute the Most Revenue. Customer demographic analysis shows that the 60+ age group represents the largest customer segment with approximately 47.2% of customers. This group also generates the highest revenue contribution, estimated at around $23M.
+- Revenue is Driven by a few high-performing Product Categories. Product performance analysis shows that the Computers category generates approximately 34.62% of revenue, making it the highest-performing category. While games and toys categories contribute significantly less with 1.3% of revenue
 
 ## Recommendation
-•	The business should leverage seasonal demand during peak months, prioritize high-performing product categories such as computers, strengthen customer retention strategies for high-value customers, and expand operations in top-performing markets.
-•	There should be continued strengthening of business presence in the United States by expanding store locations in high-performing states and increasing targeted marketing efforts to capitalize on the strong customer base. 
-•	Operational strategies and successful practices used by mature stores should be replicated (such as store layout, product assortment, and local marketing strategies) in newer locations to accelerate their revenue growth.
-•	Investments should be geared towards customer retention initiatives such as loyalty programs, personalized promotions, and customer engagement strategies. At the same time, targeted marketing campaigns should be introduced to attract new customers and support long-term growth.
-•	Marketing strategies should prioritize high-value customer segments by offering tailored promotions and product recommendations that align with their purchasing behavior. Additionally, targeted campaigns could be developed to attract younger demographics to diversify the customer base.
-•	There should be prioritization of inventory availability, promotions, and marketing for high-performing product categories. Expanding product lines within these categories may further increase revenue.
-• Management should investigate the characteristics of high-performing states—such as demographics, purchasing patterns, or product demand—and apply these strategies in underperforming regions to improve overall geographic performance.
+- The business should leverage seasonal demand during peak months, prioritize high-performing product categories such as computers, strengthen customer retention strategies for high-value customers, and expand operations in top-performing markets.
+- There should be continued strengthening of business presence in the United States by expanding store locations in high-performing states and increasing targeted marketing efforts to capitalize on the strong customer base. 
+- Operational strategies and successful practices used by mature stores should be replicated (such as store layout, product assortment, and local marketing strategies) in newer locations to accelerate their revenue growth.
+- Investments should be geared towards customer retention initiatives such as loyalty programs, personalized promotions, and customer engagement strategies. At the same time, targeted marketing campaigns should be introduced to attract new customers and support long-term growth.
+- Marketing strategies should prioritize high-value customer segments by offering tailored promotions and product recommendations that align with their purchasing behavior. Additionally, targeted campaigns could be developed to attract younger demographics to diversify the customer base.
+- There should be prioritization of inventory availability, promotions, and marketing for high-performing product categories. Expanding product lines within these categories may further increase revenue.
+- Management should investigate the characteristics of high-performing states—such as demographics, purchasing patterns, or product demand—and apply these strategies in underperforming regions to improve overall geographic performance.
 
 ## Conclusion
 This analysis delivers a comprehensive evaluation of KPI performance, product performance, customer performance, and store performance. By leveraging data-driven insights to guide strategic decisions, the company can optimize profitability, improve the overall customer experience, and drive sustainable long-term growth.
