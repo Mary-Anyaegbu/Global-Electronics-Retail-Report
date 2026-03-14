@@ -12,7 +12,7 @@ The analysis integrated sales data, product performance, customer performance me
 
 ## Power BI Dashboard
 You can view the interactive dashboard here:
-[Global Electronics Retail Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNWVkMzQ3YjUtNjk3NS00ZmFlLWEyMTUtN2JmYzBiY2RjYTcyIiwidCI6IjFmYjkyMjA4LTYxYjUtNGZlMC1hZGY1LTlkMWIxNjA1OGU0YyJ9)
+[Global Electronics Retail Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMzg2ZDNmNGItMWM5YS00YWYzLTg3NmYtMzc4Yjc0OTI3ZGYyIiwidCI6IjFmYjkyMjA4LTYxYjUtNGZlMC1hZGY1LTlkMWIxNjA1OGU0YyJ9)
 
 ## The Data Model Overview
 The dataset consists of multiple related tables: 
