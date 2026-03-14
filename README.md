@@ -2,7 +2,7 @@
 A Power BI report analyzing global electronics retail data, covering sales performance, customer segmentation, and regional insights through interactive dashboards and DAX calculations.
 
 ## Executive Summary
-The project is about Maven Electronic Global retailer that sells electronic gadgets through both online and in-store channels.
+Maven Electronic Global retailer sells electronic gadgets through both online and in-store channels.
 The company lacked a unified view of performance across sales channels, product, regions and customer demographics.
 A Sales performance dashboard was created to consolidate and analyze sales, product, customers and stores data. The dashboard tracked key performance metrics, uncovered sales trend and provided actionable insights for management to make data-driven decision.
 
@@ -12,53 +12,53 @@ The analysis integrated sales data, product performance, customer performance me
 
 ## The Data Model Overview
 The dataset consists of multiple related tables: 
-Sales: Contains transactional data including orders, delivery dates, quantities, currency, and links to customers, stores, and products. 
-Customers: Provides customer demographics (gender, age, location) to analyze customer behavior and segmentation. 
-Products: Includes product details (brand, color, subcategory, category, unit cost, and unit price) for product performance and profitability analysis. 
-Stores: Provides store-level details (location, size, and open date) to assess regional and store performance. 
-Exchange Rates (Supporting Table): Provides conversion rates by date and currency to ensure consistent reporting in USD.
+- Sales: Contains transactional data including orders, delivery dates, quantities, currency, and links to customers, stores, and products. 
+- Customers: Provides customer demographics (gender, age, location) to analyze customer behavior and segmentation. 
+- Products: Includes product details (brand, color, subcategory, category, unit cost, and unit price) for product performance and profitability analysis. 
+- Stores: Provides store-level details (location, size, and open date) to assess regional and store performance. 
+- Exchange Rates (Supporting Table): Provides conversion rates by date and currency to ensure consistent reporting in USD.
 
 ## Problem Statement
 The stakeholders sought to address critical challenges such as:
-•	Overall KPI tracking such as revenue, profit, quantity sold and number of unique customers.
-•	Trend of the KPIs over time with interest in growth/decline rate
-•	Products, categories and Subcategories driving revenue and profit growth/decline
-•	Customer segment contributing most to revenue and profit. 
-•	Customer acquisition vs retention
-•	What stores, state and countries are performing well vs declining
-•	How stores performance vary based on age of stores.
+- Overall KPI tracking such as revenue, profit, quantity sold and number of unique customers.
+- Trend of the KPIs over time with interest in growth/decline rate
+- Products, categories and Subcategories driving revenue and profit growth/decline
+- Customer segment contributing most to revenue and profit. 
+- Customer acquisition vs retention
+- What stores, state and countries are performing well vs declining
+- How stores performance vary based on age of stores.
 
 ## Tools and Methodology
 Power BI was used for the project.
 ### Data Cleaning and preparation
 The data was cleaned with Power query. To improve data quality and reliability, the following was done:
-•	Data types were correctly formatted
-•	The data was screened for duplicates
-•	Missing values were handled.
+- Data types were correctly formatted
+- The data was screened for duplicates
+- Missing values were handled.
 ### Data Transformation and Processing
 To support deeper analysis, several transformation were applied;
-•	Creation and calculation of customer age from the customer birth date 
-•	Creation and calculation of store age from open date 
-•	Categorization of customers into age groups
-•	Categorization of stores into age bins
+- Creation and calculation of customer age from the customer birth date 
+- Creation and calculation of store age from open date 
+- Categorization of customers into age groups
+- Categorization of stores into age bins
 
 ### Calculated Fields and Dax measures
 Within Power BI environment, calculated metrics were developed to quantify performance including;
-•	Total Revenue
-•	Total Profit
-•	Total Quantity Sold
-•	Unique Customers
-•	Growth rate of KPIs using Time Intelligence functions
-•	KPI parameter
-•	Top N parameter
-•	Ranking Parameter
-•	Customer Acquisition and Retention metrics
+- Total Revenue
+- Total Profit
+- Total Quantity Sold
+- Unique Customers
+- Growth rate of KPIs using Time Intelligence functions
+- KPI parameter
+- Top N parameter
+- Ranking Parameter
+- Customer Acquisition and Retention metrics
 DAX measures were used to dynamically compute KPIs across time periods, products, customer segment and stores enabling interactive dashboard analysis.
 
 ### Data validation
 Cross checks were conducted to ensure:
-•	KPI outputs were consistent across filters and segments
-•	Revenue/Profit totals matched transactional aggregates
+- KPI outputs were consistent across filters and segments
+- Revenue/Profit totals matched transactional aggregates
 This validation process ensured analytical integrity.
 ### Data Modelling
 A relational data model was designed using a star schema to link the sales, customer, product and stores table.
@@ -68,10 +68,13 @@ A date table was created and linked to the Sales table to enable time intelligen
 ### Data Visualization
 A four paged interactive dashboard was built. The dashboard answered the stakeholders questions in detail.
 Interactive dashboards were developed to present:
-•	Overview of KPIs showing Growth rate, monthly trend and summary of top 3 best performers across customer segment, product, countries and stores.
-•	Product performance by country, category and subcategories
-•	Customer performance by age group, country ….
-•	Stores performance by age group, country, states
+- Overview of KPIs showing Growth rate, monthly trend and summary of top 3 best performers across customer segment, product, countries and stores.
+- Product performance by category and subcategories
+- Customer performance by age group and country
+- Monthly Customer Acquisition vs Retention
+- Stores performance by age group, country, states
+### Dasboard preview
+
 
 ## Key Insights
 - The business generated $55.76M in revenue and $32.66M in profit, representing an approximate 58.6% profit margin, with 198K units sold to 15K unique customers. Sales trends indicate a significant dip around April followed by steady recovery, with peak performance in December, suggesting strong seasonal demand toward the end of the year.
